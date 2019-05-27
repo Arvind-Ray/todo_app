@@ -13,7 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
-import LoginPageStyle from './../../assets/jss/LoginPageStyle/LoginPageStyle.jsx'
+import LoginPageStyle from './../../assets/jss/LoginPageStyle/LoginPageStyle.jsx';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 class LoginPage extends React.Component {
@@ -28,7 +29,7 @@ class LoginPage extends React.Component {
 
   handleLoginSubmit = () => {
     if(this.state.user== "shaadi" && this.state.password==123){
-      this.props.history.push('/home')
+     setTimeout(this.props.history.push('/home'), 2000) 
     } 
   }
 
@@ -37,7 +38,9 @@ class LoginPage extends React.Component {
     const {user, password} = this.state || {};
     
     return (
+      
       <main className={classes.main}>
+      {this.state.password== 123 && this.state.user== "shaadi" && <CircularProgress  color="secondary" />}
         <CssBaseline />
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
@@ -61,10 +64,6 @@ class LoginPage extends React.Component {
                onChange={(e) => this.setState({password: e.target.value})}
               name="password" type="password" id="password"  />  {/*autoComplete="current-password"*/ }
             </FormControl>
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
             <Button
               // type="submit"
               fullWidth

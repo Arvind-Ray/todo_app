@@ -26,7 +26,7 @@ function Modal(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Slide in alert dialog
+        Finish
       </Button>
       <Dialog
         open={open}

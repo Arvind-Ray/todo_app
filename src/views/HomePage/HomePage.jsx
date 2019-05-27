@@ -18,6 +18,8 @@ const styles = theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    marginLeft:"45%",
+    paddingTop:20
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -49,6 +51,7 @@ class HomePage extends React.Component {
 
   return (
     <div>
+
     <form className={classes.root} autoComplete="off">
     <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel
