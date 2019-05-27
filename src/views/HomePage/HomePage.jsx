@@ -79,7 +79,8 @@ class HomePage extends React.Component {
          {this.state.slide &&  
          <CarouselSection  stateData = {this.state.slide  } StaticData= {Static_data} />}
          {this.state.slide && 
-          <Modal stateData = {Static_data  }/>}
+         <div style={{marginTop: 40, marginLeft:40}}>
+          <Modal stateData = {Static_data  }/></div>}
         </div>
     </div>
   );
