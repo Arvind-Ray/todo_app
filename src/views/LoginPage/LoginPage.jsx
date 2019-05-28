@@ -14,8 +14,6 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import LoginPageStyle from './../../assets/jss/LoginPageStyle/LoginPageStyle.jsx';
-import CircularProgress from '@material-ui/core/CircularProgress';
-
 
 class LoginPage extends React.Component {
 
@@ -23,9 +21,10 @@ class LoginPage extends React.Component {
     user: "",
     password: ""
   };
-  
-  
-  
+
+
+
+
 
   handleLoginSubmit = () => {
     if(this.state.user== "shaadi" && this.state.password==123){
@@ -40,7 +39,7 @@ class LoginPage extends React.Component {
     return (
       
       <main className={classes.main}>
-      {this.state.password== 123 && this.state.user== "shaadi" && <CircularProgress  color="secondary" />}
+      
         <CssBaseline />
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
